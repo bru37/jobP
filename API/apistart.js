@@ -95,7 +95,7 @@ export const fetchIssues = async (page = 1, perPage = 10) => {
 //     }catch(error){
 //     console.error('Error',error)
 
-//     throw error
+//     throw error //////
 
 // }
 // }
