@@ -1,0 +1,31 @@
+
+const [search, setSearch] = useState({ username: "", email: "" });
+const : 상수로 useState를 정의해줌
+       const를 주는 이유는 컴포넌트가 다시 렌더링되면 함수가 다시 실행되어 새 scope를 만들고,search변수도 새로 만들게 되고, 이는 이전 변수와 상관이 없게 된다. 그래서 const로 선언된 search 변수는 동일한 scope에서 다시 할당하는 것을 막을 수 있다
+
+[search, setSearch] : 배열에 임의의 변수명인 search, setSearch 정해준다
+search : 현재의 상태를 나타내는 변수값(상태값)
+setSearch : 상태값을 바꿔주는 setter함수
+useState({ username: "", email: "" }) : () 상태의 초기 값을 나타내면 {} UserList에 있는 객체name과email을 가지고 온다
+ "" : UI input 안에 공백을 나타낸다
+
+const { username, email } = search : search는 상수 const의 { username, email }를 객체로 가진다(가리킴)
+
+const onChange : 리액트에 엘리멘트 이벤트를 설정해줄떄 on이벤트이름={실행하고싶은함수} 형태로 설정해준다                                
+const onChange = () => {} : 화살표 함수를 사용하였는데 화살표 함수란?-->functio키워드 대신 =>문자를 사용해서 함수를 구현하는 방식이다
+                             ()안에는 함수의 파라미터가 들어가고 {}안에는 코드블록이 들어간다 
+
+const onChange = (e) => {
+        const { name, value } = e.target;
+        setSearch({
+            ...search,
+            [name]: value,
+            //setSearch 가 search변수의 값을 변경해줌
+        });
+    };
+    (e) : input에 onChange를 사용하기 위해서는 파라미터에 e를 가지고 와야함(onChange를 사용하면 (e) 공식처럼 봐야하나??)
+   const { name, value } : CreateUser.js에 input name과 value를 객체로 가지고온다
+= e.target : e 파라미터는 .(객체를 나타냄) target(지정)--> { name, value }객체를 e 파라미터로 객체로 지정함
+
+
+         

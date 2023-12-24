@@ -1,0 +1,8 @@
+.black-box {
+    background: gray;
+    width: 64px;
+    height: 64px;
+}
+
+/* App.js에 CSSclass를 설정해줄떄 App.js에 className를 주어서 설정을한다
+EX) <div className="gray-box'></div> */

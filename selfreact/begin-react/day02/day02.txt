@@ -1,0 +1,19 @@
+서버---->남들이 들어올 수 있도록 허용하는 컴퓨터
+로컬 환경에서 백엔드 서버를 만들어볼것
+만약애 나는 외부에 내 서버를 공개하고 싶다
+-aws, 온프레미스,개인 컴퓨터(가상머신)
+
+빌트인 객체
+https
+node 기반의 http 서버를 생성하는 객체
+createServer: server생성
+listen():서버를 실행하고 클라이언트를 기다리는 상태
+하지만,현재는 굳이 http를 활용하여 서버를 구상하진 않습니다
+http 기반의 express, fastify, nestJS와 같은 더 많은 기능을 내장하고 있는
+프레임워크들이 존재하기 떄문이다
+
+express
+웹서버의 대부분의 기능을 다른 모듈에 의존하지 않고 express 하나로 구현 가능
+
+npm init(package.json)
+npm i express   
